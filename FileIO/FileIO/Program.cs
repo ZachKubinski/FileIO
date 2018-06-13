@@ -17,7 +17,7 @@ namespace FileIO
             {
                 // Create an instance of StreamReader to read from a file.
                 // The using statement also closes the StreamReader.
-                using (StreamReader sr = new StreamReader("TestFile.txt"))
+                using (StreamReader sr = new StreamReader(fileName))
                 {
                     string line;
                     // Read and display lines from the file until the end of 
