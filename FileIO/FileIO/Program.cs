@@ -13,6 +13,7 @@ namespace FileIO
             ArrayList nums = new ArrayList();
             Int32 sum = 0;
 
+
             try
             {
                 // Create an instance of StreamReader to read from a file.
@@ -36,6 +37,9 @@ namespace FileIO
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
+
+            Console.WriteLine("Sum of numbers in data file: " + sum);
+            Console.ReadKey();
         }
     }
 }
