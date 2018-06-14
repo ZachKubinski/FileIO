@@ -39,6 +39,42 @@ namespace FileIO
             }
 
             Console.WriteLine("Sum of numbers in data file: " + sum);
+
+            Console.WriteLine("Display the whole list of inputs: ");
+            for(int i = 0; i < nums.size(); i++)
+            {
+                Console.Write(nums.get(i) + " ");
+            }
+            Console.WriteLine("Display even numbers: ");
+            for(int i = 0; i < nums.size(); i++)
+            {
+                if(nums.get(i) % 2 == 0)
+                {
+                    Console.Write(nums.get(i) + " ");
+                }
+            }
+            Console.WriteLine("Display odd numbers: ");
+            for(int i = 0; i < nums.size(); i++)
+            {
+                if(!nums.get(i) % 2 == 0)
+                {
+                    Console.Write(nums.get(i) + " ");
+                }
+            }
+            Console.WriteLine("Display every 5th num: ");
+            for(int i = 0; i < nums.size(); i += 5)
+            {
+                Console.Write(nums.get(i) + " ");
+            }
+            Console.WriteLine("Display numbers divisible by 3: ");
+            for(int i = 0; i < nums.size(); i++)
+            {
+                if(nums.get(i) % 3 == 0)
+                {
+                    Console.Write(nums.get(i) + " ")
+                }
+            }
+
             Console.ReadKey();
         }
     }
