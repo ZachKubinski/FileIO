@@ -39,22 +39,48 @@ namespace FileIO
             }
 
             Console.WriteLine("Sum of numbers in data file: " + sum);
-
-            Console.WriteLine("Even numbers: ");
-            foreach (int i in nums)
+            Console.WriteLine("Display the whole list of inputs: ");
+            for(int i = 0; i < nums.Count; i++)
             {
-                if(i % 2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
+                Object o = nums[i];
+                Console.Write(o.ToString() + " ");
             }
 
+            Console.WriteLine("Even numbers: ");
+            foreach (int i in nums)
+            {
+                if(i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
             Console.WriteLine("Odd numbers: ");
-            foreach (int i in nums)
+            foreach (int i in nums)
+            {
+                if(i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            // Displays every 5th number
+            Console.WriteLine("Every 5th number: ");
+            for (int i = 4; i < nums.Count; i += 5)
             {
-                if(i % 2 != 0)
+                int num = Int32.Parse(nums[i].ToString());
+                Console.Write(num + " ");
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Display numbers divisible by 3: ");
+            for(int i = 0; i < nums.Count; i++)
+            {
+                Object o = nums[i];
+                int number = Int32.Parse(o.ToString());
+                if(number % 3 == 0)
                 {
-                    Console.WriteLine(i);
+                    Console.Write(o.ToString() + " ");
                 }
             }
             Console.ReadKey();
