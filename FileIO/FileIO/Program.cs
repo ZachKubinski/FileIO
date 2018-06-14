@@ -71,7 +71,7 @@ namespace FileIO
             {
                 if(nums.get(i) % 3 == 0)
                 {
-                    Console.Write(nums.get(i) + " ")
+                    Console.Write(nums.get(i) + " ");
                 }
             }
 
