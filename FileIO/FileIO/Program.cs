@@ -41,37 +41,45 @@ namespace FileIO
             Console.WriteLine("Sum of numbers in data file: " + sum);
 
             Console.WriteLine("Display the whole list of inputs: ");
-            for(int i = 0; i < nums.size(); i++)
+            for(int i = 0; i < nums.Count; i++)
             {
-                Console.Write(nums.get(i) + " ");
+                Object o = nums[i];
+                Console.Write(o.ToString() + " ");
             }
             Console.WriteLine("Display even numbers: ");
-            for(int i = 0; i < nums.size(); i++)
+            for(int i = 0; i < nums.Count; i++)
             {
-                if(nums.get(i) % 2 == 0)
+                Object o = nums[i];
+                int number = Int32.Parse(o.ToString());
+                if(number % 2 == 0)
                 {
-                    Console.Write(nums.get(i) + " ");
+                    Console.Write(o.ToString() + " ");
                 }
             }
             Console.WriteLine("Display odd numbers: ");
-            for(int i = 0; i < nums.size(); i++)
+            for(int i = 0; i < nums.Count; i++)
             {
-                if(!nums.get(i) % 2 == 0)
+                Object o = nums[i];
+                int number = Int32.Parse(o.ToString());
+                if(!(number % 2 == 0))
                 {
-                    Console.Write(nums.get(i) + " ");
+                    Console.Write(o.ToString() + " ");
                 }
             }
             Console.WriteLine("Display every 5th num: ");
-            for(int i = 0; i < nums.size(); i += 5)
+            for(int i = 0; i < nums.Count; i += 5)
             {
-                Console.Write(nums.get(i) + " ");
+                Object o = nums[i];
+                Console.Write(o.ToString() + " ");
             }
             Console.WriteLine("Display numbers divisible by 3: ");
-            for(int i = 0; i < nums.size(); i++)
+            for(int i = 0; i < nums.Count; i++)
             {
-                if(nums.get(i) % 3 == 0)
+                Object o = nums[i];
+                int number = Int32.Parse(o.ToString());
+                if(number % 3 == 0)
                 {
-                    Console.Write(nums.get(i) + " ");
+                    Console.Write(o.ToString() + " ");
                 }
             }
 
