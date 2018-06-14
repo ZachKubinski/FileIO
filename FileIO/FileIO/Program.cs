@@ -42,16 +42,10 @@ namespace FileIO
 
             // Displays every 5th number
             Console.WriteLine("Every 5th number: ");
-            for (int i = 4; i < nums.Count;)
+            for (int i = 4; i < nums.Count; i += 5)
             {
                 int num = Int32.Parse(nums[i].ToString());
-                i += 5;
-                Console.Write(num);
-                // Blocks last comma
-                if (i <= nums.Count)
-                {
-                    Console.Write(", ");
-                }
+                Console.Write(num + " ");
             }
             Console.WriteLine();
 
