@@ -40,6 +40,24 @@ namespace FileIO
 
             Console.WriteLine("Sum of numbers in data file: " + sum);
 
+            Console.WriteLine("Even numbers: ");
+            foreach (int i in nums)
+            {
+                if(i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            Console.WriteLine("Odd numbers: ");
+            foreach (int i in nums)
+            {
+                if(i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
             // Displays every 5th number
             Console.WriteLine("Every 5th number: ");
             for (int i = 4; i < nums.Count; i += 5)
