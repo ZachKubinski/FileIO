@@ -39,6 +39,12 @@ namespace FileIO
             }
 
             Console.WriteLine("Sum of numbers in data file: " + sum);
+            Console.WriteLine("Display the whole list of inputs: ");
+            for(int i = 0; i < nums.Count; i++)
+            {
+                Object o = nums[i];
+                Console.Write(o.ToString() + " ");
+            }
 
             Console.WriteLine("Even numbers: ");
             foreach (int i in nums)
@@ -67,6 +73,16 @@ namespace FileIO
             }
             Console.WriteLine();
 
+            Console.WriteLine("Display numbers divisible by 3: ");
+            for(int i = 0; i < nums.Count; i++)
+            {
+                Object o = nums[i];
+                int number = Int32.Parse(o.ToString());
+                if(number % 3 == 0)
+                {
+                    Console.Write(o.ToString() + " ");
+                }
+            }
             Console.ReadKey();
         }
     }
