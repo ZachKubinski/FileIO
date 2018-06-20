@@ -37,7 +37,7 @@ namespace FileIO
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
-
+            //Finds the sum of the numbers
             Console.WriteLine("Sum of numbers in data file: \n" + "[" + sum + "]");
             Console.WriteLine("Display the whole list of inputs: ");
             Console.Write("[");
@@ -52,6 +52,7 @@ namespace FileIO
                     Console.Write(", " + nums[i]);
                 }
             }
+            //Finds all the even numbers
             Console.WriteLine("]");
             Console.WriteLine("Even numbers: ");
             Console.Write("[");
@@ -69,6 +70,7 @@ namespace FileIO
                 }
 
             }
+            //Writes to console all the even numbers
             for (int i = 0; i < ar.Count; i++)
             {
                 if (i == 0)
@@ -82,6 +84,7 @@ namespace FileIO
             }
             Console.WriteLine("]");
             ar.Clear();
+            //Finds all odd numbers
             Console.WriteLine("Odd numbers: ");
             Console.Write("[");
             foreach (int i in nums)
@@ -97,6 +100,7 @@ namespace FileIO
                 }
 
             }
+            //Writes to console all odd numbers
             for (int i = 0; i < ar.Count; i++)
             {
                 if (i == 0)
@@ -110,7 +114,7 @@ namespace FileIO
             }
             Console.WriteLine("]");
             ar.Clear();
-            // Displays every 5th number
+            // Finds every 5th number
             Console.WriteLine("Every 5th number: ");
             Console.Write("[");
             for (int i = 4; i < nums.Count; i += 5)
@@ -118,6 +122,7 @@ namespace FileIO
                 int num = Int32.Parse(nums[i].ToString());
                 ar.Add(num);
             }
+            //Writes to console every 5th number
             for (int i = 0; i < ar.Count; i++)
             {
                 if (i == 0)
@@ -131,6 +136,7 @@ namespace FileIO
             }
             Console.WriteLine("]");
             ar.Clear();
+            //Finds every number divisible by 3
             Console.WriteLine("Display numbers divisible by 3: ");
             Console.Write("[");
             for (int i = 0; i < nums.Count; i++)
@@ -142,6 +148,7 @@ namespace FileIO
                     ar.Add(o.ToString() + " ");
                 }
             }
+            //Writes to console all numbers divisible by 3
             for (int i = 0; i < ar.Count; i++)
             {
                 if (i == 0)
