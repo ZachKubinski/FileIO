@@ -38,51 +38,123 @@ namespace FileIO
                 Console.WriteLine(e.Message);
             }
 
-            Console.WriteLine("Sum of numbers in data file: " + sum);
+            Console.WriteLine("Sum of numbers in data file: \n" + "[" + sum + "]");
             Console.WriteLine("Display the whole list of inputs: ");
-            for(int i = 0; i < nums.Count; i++)
+            Console.Write("[");
+            for (int i = 0; i < nums.Count; i++)
             {
-                Object o = nums[i];
-                Console.Write(o.ToString() + " ");
+                if (i == 0)
+                {
+                    Console.Write(nums[i]);
+                }
+                else
+                {
+                    Console.Write(", " + nums[i]);
+                }
             }
-
+            Console.WriteLine("]");
             Console.WriteLine("Even numbers: ");
-            foreach (int i in nums)
-            {
-                if(i % 2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
-            }
-
-            Console.WriteLine("Odd numbers: ");
-            foreach (int i in nums)
-            {
-                if(i % 2 != 0)
-                {
-                    Console.WriteLine(i);
-                }
-            }
+            Console.Write("[");
+            ArrayList ar = new ArrayList();
+            foreach (int i in nums)
 
+            {
+
+                if (i % 2 == 0)
+
+                {
+
+                    ar.Add(i);
+
+                }
+
+            }
+            for (int i = 0; i < ar.Count; i++)
+            {
+                if (i == 0)
+                {
+                    Console.Write(ar[i]);
+                }
+                else
+                {
+                    Console.Write(", " + ar[i]);
+                }
+            }
+            Console.WriteLine("]");
+            ar.Clear();
+            Console.WriteLine("Odd numbers: ");
+            Console.Write("[");
+            foreach (int i in nums)
+
+            {
+
+                if (i % 2 != 0)
+
+                {
+
+                    ar.Add(i);
+
+                }
+
+            }
+            for (int i = 0; i < ar.Count; i++)
+            {
+                if (i == 0)
+                {
+                    Console.Write(ar[i]);
+                }
+                else
+                {
+                    Console.Write(", " + ar[i]);
+                }
+            }
+            Console.WriteLine("]");
+            ar.Clear();
             // Displays every 5th number
             Console.WriteLine("Every 5th number: ");
+            Console.Write("[");
             for (int i = 4; i < nums.Count; i += 5)
             {
                 int num = Int32.Parse(nums[i].ToString());
-                Console.Write(num + " ");
+                ar.Add(num);
             }
-            Console.WriteLine();
-
+            for (int i = 0; i < ar.Count; i++)
+            {
+                if (i == 0)
+                {
+                    Console.Write(ar[i]);
+                }
+                else
+                {
+                    Console.Write(", " + ar[i]);
+                }
+            }
+            Console.WriteLine("]");
+            ar.Clear();
             Console.WriteLine("Display numbers divisible by 3: ");
-            for(int i = 0; i < nums.Count; i++)
+            Console.Write("[");
+            for (int i = 0; i < nums.Count; i++)
             {
                 Object o = nums[i];
                 int number = Int32.Parse(o.ToString());
-                if(number % 3 == 0)
+                if (number % 3 == 0)
                 {
-                    Console.Write(o.ToString() + " ");
+                    ar.Add(o.ToString() + " ");
                 }
             }
+            for (int i = 0; i < ar.Count; i++)
+            {
+                if (i == 0)
+                {
+                    Console.Write(ar[i]);
+                }
+                else
+                {
+                    Console.Write(", " + ar[i]);
+                }
+            }
+            Console.WriteLine("]");
+            ar.Clear();
             Console.ReadKey();
         }
     }
