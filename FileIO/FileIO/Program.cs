@@ -8,7 +8,7 @@ namespace FileIO
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter Name of Data File: ");
+            Console.WriteLine("Enter Directory to Data File: ");
             String fileName = Console.ReadLine();
             ArrayList nums = new ArrayList();
             Int32 sum = 0;
